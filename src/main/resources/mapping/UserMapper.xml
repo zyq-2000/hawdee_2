@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.hawdee.demo.mapper.UserMapper">
+    <select id="findUserByMail" resultType="int">
+        select count(*) from user where umail=#{umail}
+    </select>
+    <insert id="register">
+        INSERT into user(umail,uname,upassword) values (#{umail},#{uname},#{upassword})
+    </insert>
+    <select id="login" resultType="int">
+        select count(*) from user where umail=#{umail} and upassword=#{upassword}
+    </select>
+</mapper>
