@@ -32,5 +32,11 @@ public class UserServiceImpl implements UserService {
             return 1;
         }
 
+
+
+    }
+    @Override
+    public User getUserByMail(String umail){
+        return userMapper.getUserByMail(umail);
     }
 }

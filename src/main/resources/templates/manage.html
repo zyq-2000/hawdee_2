@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<script src="@{/js/popper.min.js}"></script>
+<script src="@{/js/bootstrap.min.js}"></script>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+
+<!-- Echarts js -->
+<script th:src="@{/js/echarts.js}"></script>
+
+<!-- Jquery js -->
+<script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+
+<link rel="stylesheet" th:href="@{/css/style_manage.css}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:include="common:: header"></div>
+
+<div th:include="common :: daohang"></div>
+<div th:include="common:: footer"></div>
+</body>
+</html>

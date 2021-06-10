@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+
+    <!-- Echarts js -->
+    <script th:src="@{/js/echarts.js}"></script>
+
+    <!-- Jquery js -->
+    <script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+
+    <link rel="stylesheet" th:href="@{/css/style_manage.css}">
+
+    <title>高考大数据平台</title>
+</head>
+<body>
+<div class="navbar" th:fragment="header">
+    <div class="navbar-brand">
+        <p>高考大数据平台后台管理</p>
+<!--        <div class="topcorner" th:text="${session.user.uname}">uname</div>-->
+    </div>
+</div>
+
+<!--<div class="mycontainer" >-->
+    <div class="sidenav">
+        <header>高考大数据后台管理</header>
+        <ul>
+            <li ><a href="manage_school" ><img th:src="@{/images/1.png}">&ensp; 管理1</a></li>
+            <li ><a href="flowIn.html"><img th:src="@{/images/1.png}">&ensp; 管理2</a></li>
+            <li ><a href="flowOut.html"><img th:src="@{/images/1.png}">&ensp; 管理3</a></li>
+            <li ><a href="sexRate.html"><img th:src="@{/images/1.png}">&ensp; 管理4</a></li>
+            <li ><a href="jobRate.html" ><img th:src="@{/images/1.png}">&ensp; 管理5</a></li>
+        </ul>
+    </div>
+    <div id="functionbar" class="functionbar">
+        <h2 class="h2">高校分布</h2>
+    </div>
+
+    <div class="chart">
+        <ul>
+            <li id="985" class="mb-5 "></li>
+            <li id="211"></li>
+        </ul>
+        <script src="../js/forCharts/211.js"></script>
+        <script src="../js/forCharts/985.js"></script>
+    </div>
+<div id="copyright" class="copyright">
+    <div class="copyright-con">
+        <p class="copy-footer-29">© 2021 四川大学软件学院 第七组（周渝谦，吴昊，乔俊龙，马雍腾，刘雅欣，张小锋）</p>
+    </div>
+</div>
+<!--</div>-->
+
+
+</div>
+
+
+
+
+<script src="@{/js/popper.min.js}"></script>
+<script src="@{/js/bootstrap.min.js}"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+/*页眉导航栏*/
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #3e68a0;
+    transition: all .5s;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 50px;
+    z-index: 1030;
+    padding: 0 !important;
+    color: white;
+}
+
+.navbar-brand {
+    box-sizing: border-box;
+    padding-left: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+/*侧边栏选择器*/
+.sidenav {
+    height: 100%;
+    width: 250px; /*原始宽度*/
+    position: fixed;
+    /*z-index、top、left共同控制侧栏的悬浮（上方1，下方-1）*/
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0568C1;
+    overflow-x: hidden;
+    transition: 0.5s; /*侧栏延迟0.5s显示*/
+    /*padding-top: 60px;*/
+}
+
+.sidenav header {
+    top: 0px;
+    left: 0px;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    user-select: none;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+}
+
+.sidenav ul a {
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+    padding: 8px 8px 8px 20px;
+    transition: .4s;
+}
+
+ul li:hover a {
+    padding-left: 32px;
+    color: #0568C1;
+}
+
+/*侧边栏标签选择器*/
+.sidenav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #0568C1;
+    display: block;
+    transition: 0.3s; /*标签延迟0.3s显示*/
+}
+
+.sidenav ul img {
+    top: 8px;
+    height: 28px;
+    width: 28px;
+}
+
+.mycontainer {
+    width: 100%;
+    left: 25%;
+    height:auto;
+    overflow: auto;
+    padding-left: 15px;
+    padding-right: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    overflow-y:hidden;
+}
+
+.mycol {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+    position: relative;
+    overflow: hidden;
+    overflow-y:hidden;
+    width: 85%;
+    top: 80px;
+    left:275px;
+    transition: all .5s;
+}
+
+.functionbar {
+    padding-top: 1rem !important;
+    padding-bottom: .5rem !important;
+    margin-bottom: 10px !important;
+    flex-wrap: nowrap;
+    align-items: center !important;
+    justify-content: space-between !important;
+    display: flex !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    width: 100%;
+    height: 50px;
+    padding-left: 1.5rem !important;
+    z-index:1;
+}
+
+.h2 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    font-size: 2rem;
+    color: black;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.select-group {
+    position: relative;
+    float: right;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    display: inline-flex;
+
+}
+
+.dropdown-box {
+    height: 32px;
+    line-height: 21px;
+    color: #666666;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.ant-select {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: relative;
+    margin-left: 10px;
+    width: 120px;
+    font-size: 14px;
+}
+
+.dropdown-box .ant-select-selection {
+    border-radius: 0px !important;
+}
+
+.ant-select-selection:hover,
+.ant-select-selection:focus,
+.ant-select-selection:active {
+    border-color: #40a9ff;
+    border-right-width: 1px !important;
+    -webkit-box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.ant-select .ant-select-selection:focus {
+    border-color: #40a9ff;
+    border-right-width: 1px !important;
+
+
+}
+
+.dropdown-box .ant-select-selection-single {
+    height: 32px !important;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-box .ant-select-selection-rendered {
+    line-height: 32px !important;
+    position: relative;
+    display: block;
+    margin-left: 11px;
+    margin-right: 11px;
+
+}
+
+.ant-select-selection-rendered img {
+    position: relative;
+    float: right;
+    width: 18px;
+    padding-top: 6px;
+    padding-left: 6px;
+}
+
+.ant-select-selection-selected-value {
+    float: left;
+    max-widows: 100%;
+    padding-right: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.button {
+    color: #666;
+    background-color: #EEE;
+    border-color: #EEE;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    height: 32px;
+    padding: 0 20px;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    transition-property: all;
+    transition-duration: .3s;
+    z-index:1030;
+}
+
+.button-border.button-primary {
+    color: #1B9AF7;
+}
+
+.button-border{
+    background: none;
+    border-width: 2px;
+    border-style: solid;
+    line-height: 36px;
+}
+.button-rounded {
+    border-radius: 4px;
+}
+
+.chart {
+    width:100%;
+    height:auto;
+    margin-top: 20px;
+    overflow-y: hidden;
+    z-index: -1;
+}
+
+.chart ul{
+    width:100%;
+    height:auto;
+    overflow: hidden;
+    margin-top: 20px;
+    list-style-type: none;
+}
+.chart li{
+    position: relative;
+    align-content: center;
+    overflow: hidden;
+    width:100%;
+    height:700px;
+}
+
+
+/*当文档高度小于450px时，改变侧栏的padding属性和字体大小*/
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.list {
+    float: left;
+    display: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    z-index: 1030;
+}
+
+.list ul {
+    overflow: auto;
+    height: 160px;
+    list-style-type: none;
+    padding-left: 11px;
+    margin-top: 3px !important;
+    margin-bottom: 0 !important;
+    z-index: 1030;
+}
+
+.list ul:hover,
+.list ul:focus,
+.list ul:active {
+    border: none;
+}
+
+.list ul li {
+    padding-right: 15px;
+    height: 32px;
+    line-height: 30px;
+    cursor: pointer;
+    z-index: 1030;
+}
+
+.list ul li:hover {
+    background-color: #f5f7fa;
+}
+
+.copyright {
+    display: block;
+    position: relative;
+    height: 200px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 12px;
+    border-top: 1px solid #dee2e6;
+}
+
+.copyright-con {
+    position: relative;
+    margin-bottom: 0px;
+    margin: 0 auto;
+    width: 1200px;
+
+}
+
+.copyright-con p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.topcorner{
+    position:absolute;
+    top:10;
+    right:15;
+}

@@ -4,7 +4,7 @@ Author: W3layouts
 Author URL: http://w3layouts.com
 -->
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <title>高考志愿大数据平台</title>
@@ -16,10 +16,11 @@ Author URL: http://w3layouts.com
     <!-- //Meta tag Keywords -->
     <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
     <!--/Style-CSS -->
-    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css" th:href="@{/css/font-awesome.min.css}" />
     <!--//Style-CSS -->
-    <script type="text/javascript" src="../js/user/register.js"></script>
-    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css" media="all">
+    <script type="text/javascript" th:src="@{/js/user/register.js}"></script>
+
 
 </head>
 
@@ -38,16 +39,16 @@ Author URL: http://w3layouts.com
                         <input type="email" class="umail" name="umail" placeholder="邮箱" required="" autofocus>
                         <input type="text" class="uname" name="uname" placeholder="用户名称" required="" autofocus>
                         <input type="password" id="pw" class="upassword" name="upassword" placeholder="密码" required="" autofocus>
-                        <input type="password" id="repw" type="password"  placeholder="确认密码" onkeyup="checkpassword()">
+                        <input type="password" id="repw"  placeholder="确认密码" onkeyup="checkpassword()">
                         <span id="alert"></span></input>
                         <button class="btn" id="submit" type="submit">注册</button>
                     </form>
 
-                    <p class="account">已有帐号？ <a href="../pages/index.html">登录</a></p>
+                    <p class="account">已有帐号？ <a href="/toIndex">登录</a></p>
                 </div>
                 <div class="w3l_form align-self">
                     <div class="left_grid_info">
-                        <img src="../images/1.png" alt="" class="img-fluid">
+                        <img th:src="@{/images/1.png}"  alt="" class="img-fluid">
                     </div>
                 </div>
             </div>

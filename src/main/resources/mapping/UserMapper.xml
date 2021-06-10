@@ -6,6 +6,9 @@
     <select id="findUserByMail" resultType="int">
         select count(*) from user where umail=#{umail}
     </select>
+    <select id="getUserByMail" resultType="com.example.hawdee.demo.entity.User">
+        select * from user where umail=#{umail}
+    </select>
     <insert id="register">
         INSERT into user(umail,uname,upassword) values (#{umail},#{uname},#{upassword})
     </insert>

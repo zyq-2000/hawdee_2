@@ -7,6 +7,8 @@ spring:
     password:
     url: jdbc:mysql:///hawdee?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    cache: false
 
 mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml
@@ -17,3 +19,4 @@ logging:
       springframework:
         security=info:
 #showSql
+

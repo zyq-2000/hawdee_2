@@ -8,4 +8,5 @@ public interface UserMapper {
     public int findUserByMail(String umail);
     public int register(String umail,String uname,String upassword);
     public int login(String umail, String upassword);
+    public User getUserByMail(String umail);
 }
